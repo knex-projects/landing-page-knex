@@ -1,11 +1,15 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  weight: '400',
+})
 
 export const metadata: Metadata = {
-  title: 'Knex - Landing Page',
+  title: 'Knex Consultoria',
   description: 'Landing page',
 }
 
@@ -16,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.variable}>{children}</body>
+      <body className={poppins.variable}>{children}</body>
     </html>
   )
 }
